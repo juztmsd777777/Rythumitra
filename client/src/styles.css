@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;500;600;700&display=swap');
+
+:root { font-family: 'Noto Sans Telugu', sans-serif; color: #173126; background: #f8f7f0; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button { font: inherit; }
+.app-shell { min-height: 100svh; max-width: 680px; margin: auto; padding: 26px 20px 20px; display: flex; flex-direction: column; }
+.brand { display: flex; align-items: center; gap: 10px; color: #1f7a4d; }
+.brand-mark { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 13px; background: #dcefe3; }
+.brand strong, .brand span:last-child { display: block; line-height: 1.1; }
+.brand strong { font-size: 20px; letter-spacing: -.3px; }.brand span:last-child { font-size: 13px; color: #557263; margin-top: 4px; }
+.hero { flex: 1; display: flex; align-items: center; flex-direction: column; text-align: center; padding-top: clamp(34px, 8vh, 80px); }
+.eyebrow { margin: 0 0 14px; color: #6d8678; font-size: 16px; }.hero h1 { margin: 0; font-size: clamp(25px, 7vw, 34px); color: #173126; }.intro { margin: 12px 0 28px; font-size: 18px; line-height: 1.7; color: #4b6558; }
+.mic-button { width: clamp(156px, 45vw, 180px); height: clamp(156px, 45vw, 180px); border: 0; border-radius: 50%; background: #1f7a4d; color: white; cursor: pointer; box-shadow: 0 12px 30px #1f7a4d33; transition: transform .2s, background .2s; }
+.mic-button:hover { transform: scale(1.03); }.mic-button:disabled { cursor: wait; }.mic-button:focus-visible { outline: 4px solid #e7ad38; outline-offset: 5px; }.mic-ring { width: 70%; height: 70%; margin: auto; border-radius: 50%; display: grid; place-items: center; border: 1px solid #ffffff66; }.mic-ring svg { width: 48px; height: 48px; stroke-width: 1.8; }
+.mic-button.recording { background: #c84c36; animation: pulse 1.5s infinite; }.mic-button.processing { background: #b57916; }.mic-button.speaking { background: #286a9a; }.mic-button.error { background: #8c4b3d; }
+.status { min-height: 30px; margin: 22px 0 22px; font-size: 18px; color: #315a44; }.status.recording { color: #b63d2a; }.status.processing { color: #9b6812; }.status.speaking { color: #286a9a; }
+.response-box { width: 100%; min-height: 100px; padding: 18px 20px; border-radius: 18px; background: #fff; border: 1px solid #e3e9df; text-align: left; box-shadow: 0 5px 18px #1731260c; }.response-label { font-size: 14px; color: #6d8678; }.response-box p { margin: 8px 0 0; font-size: 18px; line-height: 1.6; color: #294336; }.response-box .transcription { margin-bottom: 14px; color: #6d8678; font-size: 16px; }.replay { margin-top: 14px; display: inline-flex; gap: 8px; align-items: center; padding: 12px 18px; border: 1px solid #bdd7c6; border-radius: 30px; color: #1f7a4d; background: transparent; cursor: pointer; }
+footer { text-align: center; color: #6d8678; font-size: 13px; margin-top: 20px; }.dot { display: inline-block; width: 8px; height: 8px; margin-right: 6px; border-radius: 50%; background: #b57916; }.dot.online { background: #2e9c61; }.dot.offline { background: #c84c36; }
+.spin { animation: spin 1s linear infinite; } @keyframes spin { to { transform: rotate(360deg); } } @keyframes pulse { 50% { box-shadow: 0 0 0 16px #c84c3620; } }
+@media (min-width: 700px) { .app-shell { padding-top: 38px; }.hero { padding-top: 50px; } }
